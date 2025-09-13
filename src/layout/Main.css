@@ -1,47 +1,80 @@
-.search-form {
-    display: flex;
-    margin-bottom: 20px;
+/* Main.css */
+
+/* Основные стили для главного компонента */
+.main {
+  padding: 40px 0;
 }
 
-.search-form input {
-    flex-grow: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-.search-form button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid #4CAF50;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
+/* Стили для пагинации */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
 }
 
-.search-form button:hover:not(:disabled) {
-    background-color: #45a049;
+.pagination-btn {
+  padding: 16px 32px;
+  font-size: 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 120px;
 }
 
-.search-form button:disabled,
-.search-form input:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.pagination-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 
-.error-message {
-    color: #d32f2f;
-    padding: 10px;
-    background-color: #ffebee;
-    border-radius: 4px;
-    margin-bottom: 20px;
+.pagination-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Контейнер для номеров страниц */
+.page-numbers {
+  display: flex;
+  gap: 10px;
+}
+
+/* Кнопки с номерами страниц */
+.page-number-btn {
+  padding: 16px 24px;
+  font-size: 24px;
+  background-color: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 60px;
+}
+
+.page-number-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.page-number-btn.active {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+/* Сообщения об ошибках и пустых результатах */
+.error-message, .no-movies {
+  font-size: 28px;
+  text-align: center;
+  margin: 40px 0;
+  color: #ff3333;
 }
 
 .no-movies {
-    text-align: center;
-    font-size: 18px;
-    color: #666;
-    padding: 40px;
+  color: #666;
 }
